@@ -115,20 +115,40 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
-                    <html>
+                    <!DOCTYPE html>
+                    <html lang="en" >
+                    <head>
+                      <meta charset="UTF-8">
+                      <link rel="stylesheet" href="css/slideStyle.css">
+                    
+                    </head>
                     <body>
-                        <div class="image-slideshow">
-                        <div class="image fade">
-                        <img src="img/slime1.png" alt="">
-                        </div>        
-                        <div class="image fade">
-                        <img src="img/slime2.png" alt="">
-                        </div>        
-                        <div class="image fade">
-                        <img src="img/slime3.png" alt="">
-                        </div>
-                        </div>
-                        <script src="js/slideshow.js"></script>
+                    <!-- partial:index.partial.html -->
+                    <div class="slider">
+                        <img
+                          id="img-1"
+                          src="img/slime1.png"
+                          alt="Image 1"
+                        />
+                        <img
+                          id="img-2"
+                          src="img/slime2.png"
+                          alt="Image 2"
+                        />
+                        <img
+                          id="img-3"
+                          src="img/slime3.png"
+                          alt="Image 3"
+                        />
+                      </div>
+                      <div class="navigation-button">
+                        <span class="dot active" onclick="changeSlide(0)"></span>
+                        <span class="dot" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                      </div>
+                    <!-- partial -->
+                      <script  src="js/script.js"></script>
+                    
                     </body>
                     </html>
                 </div>
