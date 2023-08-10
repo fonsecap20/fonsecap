@@ -116,67 +116,104 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
                     <head>
-                        <title>Slideshow Images</title>
+                        <title>HTML and CSS Slideshow</title>
                         <style>
-                        .slider {
-                            width: 500px;
-                            height: 300px;
-                            background-color: yellow;
-                            margin-left: auto;
-                            margin-right: auto;
-                            margin-top: 0px;
+                        body {
+                            font-family: Helvetica, sans-serif;
+                            padding: 5%;
                             text-align: center;
+                            font-size: 50;
+                        }
+                        
+                        /* Styling the area of the slides */
+                        
+                        #slideshow {
                             overflow: hidden;
+                            height: 510px;
+                            width: 728px;
+                            margin: 0 auto;
                         }
-                        .image-container {
-                            width: 1000px;
-                            background-color: pink;
-                            height: 300px;
-                            clear: both;
-                            position: relative;
-                            -webkit-transition: left 2s;
-                            -moz-transition: left 2s;
-                            -o-transition: left 2s;
-                            transition: left 2s;
-                        }
+                        
+                        /* Style each of the sides
+                        with a fixed width and height */
+                        
                         .slide {
                             float: left;
-                            margin: 0px;
-                            padding: 0px;
-                            position: relative;
+                            height: 510px;
+                            width: 728px;
                         }
-                        #slide-1:target ~ .image-container {
-                            left: 0px;
+                        
+                        /* Add animation to the slides */
+                        
+                        .slide-wrapper {
+                            
+                            /* Calculate the total width on the
+                        basis of number of slides */
+                            width: calc(728px * 3);
+                            
+                            /* Specify the animation with the
+                        duration and speed */
+                            animation: slide 10s ease infinite;
                         }
-                        #slide-2:target ~ .image-container {
-                            left: -500px;
+                        
+                        /* Set the background color
+                        of each of the slides */
+                        
+                        .slide:nth-child(1) {
+                            background: green;
                         }
-                        #slide-3:target ~ .image-container {
-                            left: -1000px;
+                        
+                        .slide:nth-child(2) {
+                            background: pink;
                         }
-                        .buttons {
-                            position: relative;
-                            top: -20px;
+                        
+                        .slide:nth-child(3) {
+                            background: red;
                         }
-                        .buttons a {
-                            display: inline-block;
-                            height: 15px;
-                            width: 15px;
-                            border-radius: 50px;
-                            background-color: rgb(255, 255, 255);
+                        
+                        /* Define the animation
+                        for the slideshow */
+                        
+                        @keyframes slide {
+                            
+                            /* Calculate the margin-left for
+                        each of the slides */
+                            20% {
+                                margin-left: 0px;
+                            }
+                            40% {
+                                margin-left: calc(-728px * 1);
+                            }
+                            60% {
+                                margin-left: calc(-728px * 2);
+                            }
                         }
                         </style>
                     </head>
                     <body>
-                        <div class="slider">
-                        <span id="slide-1"></span>
-                        <span id="slide-2"></span>
-                        <span id="slide-3"></span>
-                        <div class="image-container">
-                            <img src="img/slime1.png" class="slide" width="300" height="300" />
-                            <img src="img/slime2.png" class="slide" width="300" height="300" />
-                            <img src="img/slime3.png" class="slide" width="300" height="300" />
-                        </div>
+                        
+                        <!-- Define the slideshow container -->
+                        <div id="slideshow">
+                            <div class="slide-wrapper">
+                                
+                                <!-- Define each of the slides
+                            and write the content -->
+                                <div class="slide">
+                                    <h1 class="slide-number">
+                                        <img class="img-fluid rounded w-100" src="img/slime1.png" alt="">
+                                    </h1>
+                                </div>
+                                <div class="slide">
+                                    <h1 class="slide-number">
+                                        <img class="img-fluid rounded w-100" src="img/slime2.png" alt="">
+                                    </h1>
+                                </div>
+                                <div class="slide">
+                                    <h1 class="slide-number">
+                                        <img class="img-fluid rounded w-100" src="img/slime3.png" alt="">
+                                    </h1>
+                                </div>
+                            </div>
                         </div>
                     </body>
                 </div>
