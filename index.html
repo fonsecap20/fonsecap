@@ -125,8 +125,6 @@
                         position: relative;
                         margin: auto;
                         overflow: hidden; /* Hide overflowing images */
-                        float: left; /* Float the slideshows side by side */
-                        margin-right: 20px; /* Add some spacing between the slideshows */
                         }
                         
                         .mySlides {
@@ -149,10 +147,6 @@
                         font-size: 16px;
                         cursor: pointer;
                         }
-
-                        .clear-float {
-                        clear: both;
-                        }
                     </style>
                     </head>
                     <body>
@@ -170,14 +164,12 @@
                     <div class="mySlides">
                         <img class="slide-img" src="img/slime3.png" alt="">
                     </div>
+                    </div>
 
                     <div class="slideshow-controls">
-                        <button class="slideshow-button" onclick="plusSlides(-1, 1)">Previous</button>
-                        <button class="slideshow-button" onclick="plusSlides(1, 1)">Next</button>
+                    <button class="slideshow-button" onclick="plusSlides(-1, 1)">Previous</button>
+                    <button class="slideshow-button" onclick="plusSlides(1, 1)">Next</button>
                     </div>
-                    </div>
-
-                    <div class="clear-float"></div> <!-- Clear the float after both slideshows -->
 
                     <script>
                     let slideIndex1 = 1;
@@ -227,7 +219,6 @@
 
                     </body>
                     </html>
-
                 </div>
                 <hr>
                 <div class="col-lg-7">
@@ -278,15 +269,12 @@
                         <div class="mySlides">
                             <img class="slide-img" src="img/nova3.png" alt="">
                         </div>
+                        </div>
     
                         <div class="slideshow-controls">
-                            <button class="slideshow-button" onclick="plusSlides(-1, 2)">Previous</button>
-                            <button class="slideshow-button" onclick="plusSlides(1, 2)">Next</button>
+                        <button class="slideshow-button" onclick="plusSlides(-1, 2)">Previous</button>
+                        <button class="slideshow-button" onclick="plusSlides(1, 2)">Next</button>
                         </div>
-                        </div>
-    
-                        <div class="clear-float"></div> <!-- Clear the float after both slideshows -->
-                    <div>
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Project Nova: Cellosseum</h3>
