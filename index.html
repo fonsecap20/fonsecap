@@ -118,72 +118,61 @@
                     <!DOCTYPE html>
                     <html>
                     <head>
-                        <style>
-                        .slider {
-                            width: 300px;
-                            height: 300px;
-                            background-color: rgb(0, 0, 0);
-                            margin-left: auto;
-                            margin-right: auto;
-                            margin-top: 0px;
-                            text-align: center;
-                            overflow: hidden;
+                    <style>
+                        .slideshow-container {
+                        max-width: 800px;
+                        position: relative;
+                        margin: auto;
                         }
-                        .image-container {
-                            width: 1500px;
-                            background-color: rgb(0, 0, 0);
-                            height: 300px;
-                            clear: both;
-                            position: relative;
-                            -webkit-transition: left 2s;
-                            -moz-transition: left 2s;
-                            -o-transition: left 2s;
-                            transition: left 2s;
+                        
+                        .mySlides {
+                        display: none;
                         }
-                        .slide {
-                            float: left;
-                            margin: 0px;
-                            padding: 0px;
-                            position: relative;
+                        
+                        .slide-img {
+                        width: 100%;
+                        height: auto;
                         }
-                        #slide-1:target ~ .image-container {
-                            left: 0px;
-                        }
-                        #slide-2:target ~ .image-container {
-                            left: -500px;
-                        }
-                        #slide-3:target ~ .image-container {
-                            left: -1000px;
-                        }
-                        .buttons {
-                            position: relative;
-                            top: -20px;
-                        }
-                        .buttons a {
-                            display: inline-block;
-                            height: 15px;
-                            width: 15px;
-                            border-radius: 50px;
-                            background-color: rgb(255, 255, 255);
-                        }
-                        </style>
+                    </style>
                     </head>
                     <body>
-                        <div class="slider">
-                        <span id="slide-1"></span>
-                        <span id="slide-2"></span>
-                        <span id="slide-3"></span>
-                        <div class="image-container">
-                            <img src="img/slime1.png" class="slide" width="500" height="300" />
-                            <img src="img/slime2.png" class="slide" width="500" height="300" />
-                            <img src="img/slime3.png" class="slide" width="500" height="300" />
-                        </div>
-                        <div class="buttons">
-                            <a href="#slide-1"></a>
-                            <a href="#slide-2"></a>
-                            <a href="#slide-3"></a>
-                        </div>
-                        </div>
+
+                    <div class="slideshow-container">
+                    <div class="mySlides">
+                        <img class="slide-img" src="img/slime1.png" alt="">
+                    </div>
+
+                    <div class="mySlides">
+                        <img class="slide-img" src="img/slime2.png" alt="">
+                    </div>
+
+                    <div class="mySlides">
+                        <img class="slide-img" src="img/slime3.png" alt="">
+                    </div>
+                    </div>
+
+                    <script>
+                    let slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        let i;
+                        const slides = document.getElementsByClassName("mySlides");
+
+                        for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        }
+
+                        slideIndex++;
+
+                        if (slideIndex > slides.length) {
+                        slideIndex = 1;
+                        }
+
+                        slides[slideIndex - 1].style.display = "block";
+                        setTimeout(showSlides, 2000); // Change slide every 2 seconds
+                    }
+                    </script>
                     </body>
                     </html>
                 </div>
