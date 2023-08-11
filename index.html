@@ -147,6 +147,10 @@
                         font-size: 16px;
                         cursor: pointer;
                         }
+
+                        .clear-float {
+                            clear: both;
+                        }
                     </style>
                     </head>
                     <body>
@@ -170,6 +174,8 @@
                     <button class="slideshow-button" onclick="plusSlides(-1, 1)">Previous</button>
                     <button class="slideshow-button" onclick="plusSlides(1, 1)">Next</button>
                     </div>
+
+                    <div class="clear-float"></div> <!-- Clear the float after both slideshows -->
 
                     <script>
                     let slideIndex1 = 1;
@@ -275,6 +281,8 @@
                         <button class="slideshow-button" onclick="plusSlides(-1, 2)">Previous</button>
                         <button class="slideshow-button" onclick="plusSlides(1, 2)">Next</button>
                         </div>
+
+                        <div class="clear-float"></div> <!-- Clear the float after both slideshows -->
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Project Nova: Cellosseum</h3>
