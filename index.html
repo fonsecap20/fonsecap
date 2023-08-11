@@ -121,8 +121,10 @@
                     <style>
                         .slideshow-container {
                         max-width: 800px;
+                        height: 400px; /* Set a fixed height for the container */
                         position: relative;
                         margin: auto;
+                        overflow: hidden; /* Hide overflowing images */
                         }
                         
                         .mySlides {
@@ -131,7 +133,8 @@
                         
                         .slide-img {
                         width: 100%;
-                        height: auto;
+                        height: 100%; /* Set the height to 100% to fill the container */
+                        object-fit: cover; /* Maintain image aspect ratio while covering the container */
                         }
 
                         .slideshow-controls {
@@ -193,9 +196,6 @@
                         slides[slideIndex - 1].style.display = "block";
                     }
                     </script>
-
-                    </body>
-                    </html>
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Slime-Handed</h3>
