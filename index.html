@@ -510,6 +510,108 @@
             <hr>
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                    <style>
+                        .slideshow-container {
+                        max-width: 800px;
+                        height: 400px; /* Set a fixed height for the container */
+                        position: relative;
+                        margin: auto;
+                        overflow: hidden; /* Hide overflowing images */
+                        }
+                        
+                        .mySlides4 {
+                        display: none;
+                        }
+                        
+                        .slide-img {
+                        width: 100%;
+                        height: 100%; /* Set the height to 100% to fill the container */
+                        object-fit: cover; /* Maintain image aspect ratio while covering the container */
+                        }
+
+                        .slideshow-controls {
+                        text-align: center;
+                        margin-top: 10px;
+                        }
+
+                        .slideshow-button {
+                        padding: 5px 10px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        }
+                    </style>
+                    </head>
+                    <body>
+
+                    <div class="slideshow-container">
+                    <div class="mySlides4">
+                        <iframe width="385" height="216" src="https://www.youtube.com/embed/QucUcVDeCIM?si=ivUje1D8PVG07VfD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    </div>
+
+                    <div class="slideshow-controls">
+                    <button class="slideshow-button" onclick="plusSlides4(-1)">Previous</button>
+                    <button class="slideshow-button" onclick="plusSlides4(1)">Next</button>
+                    </div>
+
+                    <script>
+                    let slideIndex4 = 1;
+                    showSlides4(slideIndex4);
+
+                    function plusSlides4(n) {
+                        showSlides4(slideIndex4 += n);
+                    }
+
+                    function showSlides4(n) {
+                        let i;
+                        const slides = document.getElementsByClassName("mySlides4");
+
+                        if (n > slides.length) {
+                        slideIndex4 = 1;
+                        }
+                        if (n < 1) {
+                        slideIndex4 = slides.length;
+                        }
+
+                        for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        }
+
+                        slides[slideIndex4 - 1].style.display = "block";
+                    }
+                    </script>
+                    </body>
+                    </html>
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">A2Go!</h3>
+                    <p>
+                        An AR tourist app encouraging you to explore Ann Arbor to plant trees and get rid of critters which might hinder their value.
+                    </p>
+                    <h4>Contributions</h4>
+                    <p>
+                        <ul>
+                            <li>Designed and implemented all UI elements to provided a low-complexity and welcoming art style.</li>
+                            <li>Structured a database of tree and enemy objects used to pass data between scenes.</li>
+                            <li>Utlizied Mapbox systems to provide an accurate map of a user's surroundings.</li>
+                            <li>Diversified enemy types with different movement patterns to make the game aspect more alluring.</li>
+                            <li>Handled user camera controls to allow preferred perspectivs of the environment.</li>
+                        </ul>
+                    </p>
+                    <h4>Toolkit</h4>
+                    <p>
+                        I developed this with one partner through the <b>Unity</b> game engine and <b>AR</b> framework. The mapping data was 
+                        gained with <b>Mapbox</b> technology and altered to fit our needs. Project management was handled through the 
+                        <b>Jira</b> Software, and version control was handled with <b>Github</b>.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
                     <img class="img-fluid rounded w-100" src="img/card_back.png" alt="">
                 </div>
                 <div class="col-lg-7">
