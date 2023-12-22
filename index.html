@@ -24,6 +24,34 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Slide Settings -->
+    <style>
+        .slideshow-container {
+        max-width: 800px;
+        height: 400px; /* Set a fixed height for the container */
+        position: relative;
+        margin: auto;
+        overflow: hidden; /* Hide overflowing images */
+        }
+
+        .slide-img {
+        width: 100%;
+        height: 100%; /* Set the height to 100% to fill the container */
+        object-fit: cover; /* Maintain image aspect ratio while covering the container */
+        }
+
+        .slideshow-controls {
+        text-align: center;
+        margin-top: 10px;
+        }
+
+        .slideshow-button {
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -113,87 +141,52 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
                     <style>
-                        .slideshow-container {
-                        max-width: 800px;
-                        height: 400px; /* Set a fixed height for the container */
-                        position: relative;
-                        margin: auto;
-                        overflow: hidden; /* Hide overflowing images */
-                        }
-                        
                         .mySlides2 {
                         display: none;
                         }
-                        
-                        .slide-img {
-                        width: 100%;
-                        height: 100%; /* Set the height to 100% to fill the container */
-                        object-fit: cover; /* Maintain image aspect ratio while covering the container */
-                        }
-
-                        .slideshow-controls {
-                        text-align: center;
-                        margin-top: 10px;
-                        }
-
-                        .slideshow-button {
-                        padding: 5px 10px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        }
                     </style>
-                    </head>
-                    <body>
 
                     <div class="slideshow-container">
-                    <div class="mySlides2">
-                        <iframe width="385" height="216" src="https://www.youtube.com/embed/UfdB0nQPI6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="mySlides2">
-                        <iframe width="385" height="216" src="https://www.youtube.com/embed/Zd6ywi591Io?si=r2nWsMpLo3KEGIe1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-
+                        <div class="mySlides2">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/UfdB0nQPI6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="mySlides2">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/Zd6ywi591Io?si=r2nWsMpLo3KEGIe1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                     </div>
 
                     <div class="slideshow-controls">
-                    <button class="slideshow-button" onclick="plusSlides2(-1)">Previous</button>
-                    <button class="slideshow-button" onclick="plusSlides2(1)">Next</button>
+                        <button class="slideshow-button" onclick="plusSlides2(-1)">Previous</button>
+                        <button class="slideshow-button" onclick="plusSlides2(1)">Next</button>
                     </div>
 
                     <script>
-                    let slideIndex2 = 1;
-                    showSlides2(slideIndex2);
+                        let slideIndex2 = 1;
+                        showSlides2(slideIndex2);
 
-                    function plusSlides2(n) {
-                        showSlides2(slideIndex2 += n);
-                    }
-
-                    function showSlides2(n) {
-                        let i;
-                        const slides = document.getElementsByClassName("mySlides2");
-
-                        if (n > slides.length) {
-                        slideIndex2 = 1;
-                        }
-                        if (n < 1) {
-                        slideIndex2 = slides.length;
+                        function plusSlides2(n) {
+                            showSlides2(slideIndex2 += n);
                         }
 
-                        for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                        }
+                        function showSlides2(n) {
+                            let i;
+                            const slides = document.getElementsByClassName("mySlides2");
 
-                        slides[slideIndex2 - 1].style.display = "block";
-                    }
+                            if (n > slides.length) {
+                            slideIndex2 = 1;
+                            }
+                            if (n < 1) {
+                            slideIndex2 = slides.length;
+                            }
+
+                            for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                            }
+
+                            slides[slideIndex2 - 1].style.display = "block";
+                        }
                     </script>
-
-                    </body>
-                    </html>
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Project Nova: Cellosseum</h3>
@@ -223,85 +216,52 @@
             <hr>
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
                     <style>
-                        .slideshow-container {
-                        max-width: 800px;
-                        height: 400px; /* Set a fixed height for the container */
-                        position: relative;
-                        margin: auto;
-                        overflow: hidden; /* Hide overflowing images */
-                        }
-                        
                         .mySlides0 {
                         display: none;
                         }
-                        
-                        .slide-img {
-                        width: 100%;
-                        height: 100%; /* Set the height to 100% to fill the container */
-                        object-fit: cover; /* Maintain image aspect ratio while covering the container */
-                        }
-
-                        .slideshow-controls {
-                        text-align: center;
-                        margin-top: 10px;
-                        }
-
-                        .slideshow-button {
-                        padding: 5px 10px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        }
                     </style>
-                    </head>
-                    <body>
 
                     <div class="slideshow-container">
-                    <div class="mySlides0">
-                        <iframe width="385" height="216" src="https://www.youtube.com/embed/fCvRewE4dEA?si=2kN0ph7vedUkqfsf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-
-                    <div class="mySlides0">
-                        <iframe width="385" height="216" src="https://www.youtube.com/embed/mHBrbEf0kWQ?si=Yw4gr-g5pPSqF94s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+                        <div class="mySlides0">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/fCvRewE4dEA?si=2kN0ph7vedUkqfsf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="mySlides0">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/mHBrbEf0kWQ?si=Yw4gr-g5pPSqF94s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
                     </div>
 
                     <div class="slideshow-controls">
-                    <button class="slideshow-button" onclick="plusSlides0(-1)">Previous</button>
-                    <button class="slideshow-button" onclick="plusSlides0(1)">Next</button>
+                        <button class="slideshow-button" onclick="plusSlides0(-1)">Previous</button>
+                        <button class="slideshow-button" onclick="plusSlides0(1)">Next</button>
                     </div>
 
                     <script>
-                    let slideIndex0 = 1;
-                    showSlides0(slideIndex0);
+                        let slideIndex0 = 1;
+                        showSlides0(slideIndex0);
 
-                    function plusSlides0(n) {
-                        showSlides0(slideIndex0 += n);
-                    }
-
-                    function showSlides0(n) {
-                        let i;
-                        const slides = document.getElementsByClassName("mySlides0");
-
-                        if (n > slides.length) {
-                        slideIndex0 = 1;
-                        }
-                        if (n < 1) {
-                        slideIndex0 = slides.length;
+                        function plusSlides0(n) {
+                            showSlides0(slideIndex0 += n);
                         }
 
-                        for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                        }
+                        function showSlides0(n) {
+                            let i;
+                            const slides = document.getElementsByClassName("mySlides0");
 
-                        slides[slideIndex0 - 1].style.display = "block";
-                    }
+                            if (n > slides.length) {
+                            slideIndex0 = 1;
+                            }
+                            if (n < 1) {
+                            slideIndex0 = slides.length;
+                            }
+
+                            for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                            }
+
+                            slides[slideIndex0 - 1].style.display = "block";
+                        }
                     </script>
-                    </body>
-                    </html>
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">SpeakVR</h3>
