@@ -374,7 +374,55 @@
             <hr>
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/aqua.png" alt="">
+                    <style>
+                        .mySlides3 {
+                        display: none;
+                        }
+                    </style>
+
+                    <div class="slideshow-container">
+                        <div class="mySlides3">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/2vScc-IJN0I?si=gkSTDIdB6iiodEiu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="mySlides3">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/cThTXtk0wYE?si=uAAT3zanSbQQUYj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="mySlides3">
+                            <iframe width="385" height="216" src="https://www.youtube.com/embed/EQa1vHWRNkM?si=sokJyVT0Y9zLU3qH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="slideshow-controls">
+                        <button class="slideshow-button" onclick="plusSlides3(-1)">Previous</button>
+                        <button class="slideshow-button" onclick="plusSlides3(1)">Next</button>
+                    </div>
+
+                    <script>
+                        let slideIndex3 = 1;
+                        showSlides3(slideIndex3);
+
+                        function plusSlides3(n) {
+                            showSlides3(slideIndex3 += n);
+                        }
+
+                        function showSlides3(n) {
+                            let i;
+                            const slides = document.getElementsByClassName("mySlides3");
+
+                            if (n > slides.length) {
+                            slideIndex3 = 1;
+                            }
+                            if (n < 1) {
+                            slideIndex3 = slides.length;
+                            }
+
+                            for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                            }
+
+                            slides[slideIndex3 - 1].style.display = "block";
+                        }
+                    </script>
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Legend(s) of Zelda</h3>
